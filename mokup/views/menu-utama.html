@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../public/script/angular.min.js"></script>
+	<link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body onload="times()">
+	<div id="background"></div>
+	<div id="bg">
+
+		<!-- Header -->
+		<div id="bg-header" class="flex">
+			<table>
+			  <tr>
+			      <td id="logo">
+			          <img src="../public/img/logo.png" height="115" alt="Logo">
+			      </td>
+			      <td id="label">
+			          <div id="label-1" align="center">UNIKOM</div>
+			          <div id="label-2" align="center">UNIVERSITAS KOMPUTER INDONESIA</div><br>
+			          <div id="label-3" align="center">Quality Is Our Tradition</div>
+			      </td>
+			  </tr>
+			</table>
+					        
+			<div id="header-img">
+			  <img src="../public/img/bg-header.png" alt="bg-header">
+			</div>
+		</div>
+
+		<!-- Menu -->
+		<div id="bg-main" class="flex">
+			<div id="bg-row" class="flex">
+				<a href="menu-akademik.html" class="menu-utama flex">
+				    <span>LAYANAN AKADEMIK</span>
+				</a>
+
+				<a href="menu-administrasi.html" class="menu-utama flex">
+				    <span>LAYANAN ADMINISTRASI</span>        
+				</a>
+			</div>
+			
+			<div id="back">
+				<a href="standby.html">
+					<img src="../public/img/ic_back.png" width="100" alt="back">
+				</a>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<div id="footer" class="flex">
+			<div id="footer-time"></div>
+			<marquee behavior="" direction="">
+				BIRO ADMINISTRASI AKADEMIK DAN KEMAHASISWAAN UNIKOM
+			</marquee>
+		</div>
+
+	</div>
+
+	<script src="../controller/controller.js"></script>
+	<script src="../public/script/client.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../public/script/angular.min.js"></script>
+	<link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body onload="times()">
+	<div id="background"></div>
+	<div id="bg">
+
+		<!-- Header -->
+		<div id="bg-header" class="flex">
+			<h1> Welcome </h1>			
+		</div>
+
+		<!-- slider -->
+		<div id="cont-slider" class="flex">
+			<div id="slider" class="flex" style="overflow:hidden; flex-direction:row;">
+               
+                <!-- 
+                    setiap menambah gambar baru,
+                    tambah attribute id="img-<ke-n>" dan class="slider"
+                  -->
+                <img id="img-1" class="slider" src="../public/img/slider_imagine.png" alt="gambar">
+                <img id="img-2" class="slider" src="../public/img/bg-img.jpg" alt="img">
+			</div>
+		</div>
+		
+						<!-- Footer -->
+		<div id="footer" class="flex" style="background-color: rgba(255, 255, 255, 0.9)">
+			<div id="footer-time"></div>
+			<marquee>
+				UNIVERSITAS KOMPUTER INDONESIA
+			</marquee>
+		</div>
+
+		
+        <div id="frame">
+            <img src="../public/img/frameset.png" alt="">
+        </div>
+
+	</div>
+	
+	<div id="cont-logo-stnd" class="flex">
+        <img id="logo-stnd" src="../public/img/logo.png" height="115" alt="Logo">
+    </div>
+    
+    <div id="cont-ktm" class="flex">
+        <div id="ktm" class="flex">
+            <p>TAP YOUR KTM HERE</p>
+            <a href="menu-utama.html">
+                <img src="../public/img/ic_back.png" alt="back">
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../public/script/client.js"></script>
+	<script src="../controller/controller.js"></script>
+</body>
+</html>
