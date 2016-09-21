@@ -87,7 +87,27 @@
 
 	</div>
 
-	<script src="../controller/controller.js"></script>
-	<script src="../public/script/client.js"></script>
+    <script>
+        var $ = function(val){ return document.getElementById(val); };
+        var $$ = function(val){ return document.querySelectorAll(val); };
+
+        //-- modal --
+        $('exit').onclick = function(){
+            $('modal').style.display = 'none';
+            $('modal-container').style.display = 'none';
+            $('modal-container').style.backgroundColor = 'rgba(0,0,0,0)';
+        };
+
+        var menuA = $$('.menu-akademik');
+        for (var i = 0; i <= menuA.length; i++) {
+            menuA[i].onclick = function(){
+                $('modal-container').style.display = 'flex';
+                $('modal').style.display = 'flex';
+                $('modal-container').style.backgroundColor = 'rgba(0,0,0,0.7)';
+            }
+        }
+    </script>
+	<script type="text/javascript" src="../controller/controller.js"></script>
+	<script type="text/javascript" src="../public/script/client.js"></script>
 </body>
 </html>

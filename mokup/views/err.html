@@ -49,6 +49,7 @@
                 </div>
                 
 			</div>
+			
 		</div>
 		
 						<!-- Footer -->
@@ -63,7 +64,6 @@
             <img src="../public/img/frameset.png" alt="">
         </div>
 	</div>
-
 	
 	<div id="cont-logo-stnd" class="flex">
         <img id="logo-stnd" src="../public/img/logo.png" height="115" alt="Logo">
@@ -72,10 +72,56 @@
     <div id="cont-ktm" class="flex">
         <div id="ktm" class="flex">
             <p>TAP YOUR KTM HERE</p>
-            <a href="menu-utama.html">
+            <a href="" id="masuk">
                 <img src="../public/img/ic_back.png" alt="back">
             </a>
         </div>
+    </div>
+    
+    			        <!-- Modal -->
+    <div id="modal-container" class="flex">
+        <div id="modal" class="error">
+               
+            <div id="modal-header" class="flex">
+                <p>KTM ANDA BELUM TERDAFTAR</p>
+            </div>
+                
+            <div id="modal-main" class="flex" style="height: 40%; justify-content: flex-start;">
+                <label>Silahkan daftarkan NIM dan NAMA anda</label>
+            </div>
+                
+            <div id="modal-footer" class="flex">
+                <div id="exit" class="flex">
+                    KEMBALI
+                </div>
+                <div id="daftar" class="flex">
+                   DAFTAR
+                </div>
+            </div>
+        </div>  
+
+        <div id="form-daftar" class="flex">
+            <form action="">
+                <table border="0">
+                    <tr>
+                        <td>NIM<td><input type="text" name="nim"></td>
+                    </tr>
+                    <tr>
+                        <td>NAMA<td><input type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>SEMESTER<td><input type="text" name="semester"></td>
+                    </tr>
+                    <tr>
+                        <td>JURUSAN<td><input type="text" name="jurusan"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" name="daftar" value="DAFTAR"></td>
+                    </tr>
+                </table>
+            </form>
+        </div> 
+
     </div>
     
     <script type="text/javascript" src="../public/script/client.js"></script>
@@ -112,6 +158,24 @@
         }
 
         setInterval(change, 10000);
+        
+        $('exit').onclick = function(){
+            $('modal').style.display = 'none';
+            $('modal-container').style.display = 'none';
+            $('modal-container').style.backgroundColor = 'rgba(0,0,0,0)';
+        };
+
+        $('daftar').onclick = function(){
+            $('modal').style.display = 'none';
+            $('form-daftar').style.display = 'flex';
+        };
+
+        $('masuk').onclick = function(){
+            $('form-daftar').style.display = 'none';
+            $('modal-container').style.display = 'flex';
+            $('modal').style.display = 'flex';
+            $('modal-container').style.backgroundColor = 'rgba(0,0,0,0.7)';
+        };
 
     </script>
 </body>
