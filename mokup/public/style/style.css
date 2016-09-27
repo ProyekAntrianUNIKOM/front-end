@@ -97,22 +97,24 @@ html, body {
 }
 
 .bg-antrian #row .card-antrian {
-    border-right: 1px solid rgba(255, 255, 255, 0.85);
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Montserrat-Regular', calibri;
+}
+
+.bg-antrian #row .card-antrian:not(:last-of-type) {
+    border-right: 1px solid rgba(255, 255, 255, 0.85);    
 }
 
 .bg-antrian #row .card-antrian .nomor {
     font-size: 90px;
-    font-family: calibri;
     color: #ffffff;
 }
 
 .bg-antrian #row .card-antrian .ketLoket {
     background: #017dbe;
-    font-family: calibri;
     color: #ffffff;
     padding: 10px;
     border-radius: 10px;
@@ -263,17 +265,30 @@ html, body {
     margin-right: 6%;
 }
 
-.bg-antrian #bg-main #column #news h1 {
-    text-align: center;
-    border-bottom: 1px solid #000;
-}
-
 .bg-antrian #bg-main #column #news .berita {
     padding: 2%;
     height: 90%;
     position: absolute;
     background: #fff;
     overflow: hidden;
+}
+
+.bg-antrian #bg-main #column #news .header {
+    height: 20%;
+    border: 1px solid #000;
+}
+
+.bg-antrian #bg-main #column #news img {
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-antrian #bg-main #column #news h1 {
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+    text-align: center;
+    border-bottom: 1px solid #000;
+    position: absolute;
 }
 
 
@@ -332,6 +347,10 @@ html, body {
     -webkit-animation-duration: 2s;
     -moz-animation-name: slider-standby;
     -moz-animation-duration: 2s;
+}
+
+#slider .slider img {
+    width: 1190px;
 }
 
 #slider .caption {
@@ -636,7 +655,7 @@ html, body {
     position: absolute;
     display: inherit;
     width: 60%;
-    height: 85%;
+    height: 88%;
     background: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     animation-name: form-anim;
@@ -653,7 +672,12 @@ html, body {
 }
 
 #form-daftar td {
-    padding: 28px;
+    padding: 25px;
+}
+
+#form-daftar td[colspan] {
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 #form-daftar input[type=button] {
@@ -662,8 +686,18 @@ html, body {
     color: #fff;
     outline-style: none;
     border-style: none;
-    height: 70px;
+    height: 60px;
     cursor: pointer;
+}
+
+#form-daftar tr:nth-of-type(5) td {
+    padding-top: 50px;
+}
+
+#form-daftar tr:last-child td input{
+    background-color: #fff;
+    color: #2d2e2e;
+    border: 1px solid #2d2e2e;
 }
 
 #form-daftar input[type=button]:active {

@@ -118,6 +118,9 @@
                     <tr>
                         <td colspan="2"><input type="button" name="daftar" value="DAFTAR"></td>
                     </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" id="batal" name="batal" value="BATAL"></td>
+                    </tr>
                 </table>
             </form>
         </div> 
@@ -158,6 +161,12 @@
         }
 
         setInterval(change, 10000);
+
+        $('batal').onclick = function(){
+            $('modal').style.display = 'none';
+            $('modal-container').style.display = 'none';
+            $('form-daftar').style.display = 'none';
+        }
         
         $('exit').onclick = function(){
             $('modal').style.display = 'none';
