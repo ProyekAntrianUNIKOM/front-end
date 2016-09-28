@@ -12,45 +12,17 @@
 
 		<!-- Header -->
 		<div id="bg-header" class="flex">
-			<h1> Welcome </h1>			
+			<h1> Welcome </h1>
 		</div>
 
 		<!-- slider -->
 		<div id="cont-slider" class="flex">
 			<div id="slider" class="flex" style="overflow:hidden; flex-direction:row;">
-               
-                <!-- 
-                    setiap menambah gambar baru,
-                    tambah attribute id="img-<ke-n>" dan class="slider"
-                  -->
-                <div id="img-1" class="slider">
-                    <img src="../public/img/slider_imagine.png" alt="gambar">
-                    <div class="caption">
-                        <p>
-                            2 WINNER MICROSOFT IMAGINE CUP 2015
-                        </p>
-                    </div>
-                </div>
-                <div id="img-2" class="slider">
-                    <img src="../public/img/bg-img.jpg" alt="img">
-                    <div class="caption">
-                        <p>
-                            GEDUNG BARU UNIKOM
-                        </p>
-                    </div>
-                </div>
-                <div id="img-3" class="slider">
-                    <img  src="../public/img/20160830_123303.jpg" alt="bebas">
-                    <div class="caption">
-                        <p>
-                            PERESMIAN GEDUNG BARU UNIKOM
-                        </p>
-                    </div>
-                </div>
-                
+
+
 			</div>
 		</div>
-		
+
 						<!-- Footer -->
 		<div id="footer" class="flex" style="background-color: rgba(255, 255, 255, 0.9);">
 			<div id="footer-time"></div>
@@ -58,17 +30,17 @@
 				UNIVERSITAS KOMPUTER INDONESIA
 			</marquee>
 		</div>
-		
+
         <div id="frame">
             <img src="../public/img/frameset.png" alt="">
         </div>
 	</div>
 
-	
+
 	<div id="cont-logo-stnd" class="flex">
         <img id="logo-stnd" src="../public/img/logo.png" height="115" alt="Logo">
     </div>
-    
+
     <div id="cont-ktm" class="flex">
         <div id="ktm" class="flex">
             <p>TAP YOUR KTM HERE</p>
@@ -77,29 +49,29 @@
             </a>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="../public/script/client.js"></script>
     <script src="../controller/controller.js"></script>
     <script>
-        var $ = function(val){ return document.getElementById(val); };
-        var $$ = function(val){ return document.querySelectorAll(val); };
+        var id = function(val){ return document.getElementById(val); };
+        var sel = function(val){ return document.querySelectorAll(val); };
 
         //-- slideshow standby --
-        var ximg = $$('.slider').length;
+        var ximg = sel('img').length + 1;
         var x = 1;
 
         function active(n) {
             var j = n + 1;
             for (var i = 1; i <= ximg; i++) {
-                $('img-' + i).style.zIndex = i;
+                id('img-' + i).style.zIndex = i;
 
             }
                 if (j > ximg)
                     j = 1;
 
-                $('img-' + n).style.zIndex = ximg + 1;
-                $('img-' + n).style.display = 'inherit';
-                $('img-' + j).style.display = 'none';
+                id('img-' + n).style.zIndex = ximg + 1;
+                id('img-' + n).style.display = 'inherit';
+                id('img-' + j).style.display = 'none';
         }
 
         function change() {
@@ -114,5 +86,20 @@
         setInterval(change, 10000);
 
     </script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type: 'GET',
+				url: 'http://localhost/lumenapi/public/api/banner',
+				dataType: 'json',
+				success: function (data) {
+					var i=1;
+					jQuery.each(data.result, function(index, element) {
+							$('#slider').append('<div id=img-'+i+' class=slider><img src=http://localhost/lumenapi/public/banner/'+element.banner_img+' alt=gambar><div class=caption><p>'+element.judul+'</p></div></div>');
+							i+=1;
+					});
+				}
+			});
+		</script>
 </body>
 </html>
