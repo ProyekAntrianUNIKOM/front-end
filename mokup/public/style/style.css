@@ -13,7 +13,6 @@
     src: url('../font/Lobster.otf');
 }
 
-
 .flex {
 	display: flex;
 	display: -webkit-flex;
@@ -94,30 +93,34 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    background: -webkit-linear-gradient(left, rgb(29, 209, 246), rgb(9, 96, 203));
+    background: -moz-linear-gradient(left, rgb(29, 209, 246), rgb(9, 96, 203));
+    background: linear-gradient(left, rgb(29, 209, 246), rgb(9, 96, 203));
 }
 
 .bg-antrian #row .card-antrian {
     width: 100%;
+    height: 90%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Montserrat-Regular', calibri;
-}
-
-.bg-antrian #row .card-antrian:not(:last-of-type) {
-    border-right: 1px solid rgba(255, 255, 255, 0.85);
+    margin: 0.5%;
+    font-family: 'Open Sans', calibri;
+    font-weight: 700;
+    background: rgba(51, 175, 209, .75);
+    border-radius: 3%;
 }
 
 .bg-antrian #row .card-antrian .nomor {
-    font-size: 90px;
+    font-size: 100px;
     color: #ffffff;
 }
 
 .bg-antrian #row .card-antrian .ketLoket {
-    background: #017dbe;
     color: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
+    margin-top: -40px;
+    font-size: 25px;
+    font-family: 'Montserrat-Regular', calibri;
 }
 
 #bg-header h1 {
@@ -245,9 +248,9 @@ html, body {
 }
 
 .bg-antrian #bg-main #column {
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: #fff;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -259,36 +262,45 @@ html, body {
     background: #fff;
     position: relative;
     margin: 2%;
-    padding: 2%;
+    margin-bottom: 0;
     font-family: 'Montserrat-Regular';
     color: rgba(0,0,0,0.7);
-    margin-right: 6%;
-}
-
-.bg-antrian #bg-main #column #news .berita {
-    padding: 2%;
-    height: 90%;
-    position: absolute;
-    background: #fff;
     overflow: hidden;
 }
 
-.bg-antrian #bg-main #column #news .header {
-    height: 20%;
-    border: 1px solid #000;
+.bg-antrian #bg-main #column #news .berita {
+    height: 49%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3%;
+    animation: geser 15s 5s infinite;
 }
 
 .bg-antrian #bg-main #column #news img {
-    top: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 
 .bg-antrian #bg-main #column #news h1 {
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
-    text-align: center;
-    border-bottom: 1px solid #000;
+    background: rgba(0,0,0,.5);
     position: absolute;
+    width: 100%;
+    height: 20%;
+    padding: 2%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: none;
+    bottom: -8%;
+}
+
+@keyframes geser {
+    0% { transform: translateY(0)}
+    25% {transform: translateY(-107%)}
+    50% {transform: translateY(-214%)}
+    75% {transform: translateY(-321%)}
+    100% {transform: translateY(-428%)}
 }
 
 
@@ -452,7 +464,7 @@ html, body {
     font-size: 20px;
     border-bottom: 1px solid rgba(0,0,0,0.3);
     transition: height 0.3s;
-}
+} 
 
 .login #bg-main #bg-row #main table tr td{
     padding: 15px;
@@ -546,7 +558,7 @@ html, body {
     position: absolute;
     margin: auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-
+    
     -webkit-animation-name: muncul;
     -webkit-animation-duration: 0.3s;
     -webkit-animation-timing-function: cubic-bezier(.35, -0.01, .57, 2);
@@ -627,7 +639,7 @@ html, body {
 }
 
 #modal-footer {
-    flex-direction: row;
+    flex-direction: row;    
     position: relative;
     height: 20%;
     background: #2d2e2e;
