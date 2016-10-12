@@ -273,7 +273,6 @@ html, body {
     position: relative;
     overflow: hidden;
     margin-bottom: 3%;
-    animation: geser 15s 5s infinite;
 }
 
 .bg-antrian #bg-main #column #news img {
@@ -293,14 +292,6 @@ html, body {
     font-size: 20px;
     font-weight: none;
     bottom: -8%;
-}
-
-@keyframes geser {
-    0% { transform: translateY(0)}
-    25% {transform: translateY(-107%)}
-    50% {transform: translateY(-214%)}
-    75% {transform: translateY(-321%)}
-    100% {transform: translateY(-428%)}
 }
 
 
