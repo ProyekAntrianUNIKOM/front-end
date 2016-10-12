@@ -42,6 +42,7 @@
             <video src="../public/video/cl.mp4" height="100%" style="background:#fff;" autoplay loop muted></video>
             <div id="column" class="flex">
                <div id="news">
+                   
                     <div id="content-1" class="berita">
                         <img src="../public/img/slider_imagine.png" alt="image">
                         <h1>Juara Imagine Cup 2015</h1>                            
@@ -61,6 +62,7 @@
                         <img src="../public/img/65610-robot-karya-mahasiswa-unikom-bandung-juara-kompetisi-robogames-2016-8a2_highres.jpg" alt="">
                         <h1>Robot unikom kembali <juaraS></juaraS></h1>
                     </div>
+                    
                </div>
             </div>
 		</div>
@@ -75,12 +77,29 @@
 
 	</div>
     <script>
-        var id = function(val){ 
-            return document.getElementById(val); 
+        var id = function(val){ return document.getElementById(val); }
+        var sel = function(val){ return document.querySelectorAll(val); }
+        var ximg = sel('img').length;
+        var trans = 0;
+        var temp = 2;
+        
+        function geser() {
+            trans = trans + 107;
+            temp++;
+            
+            if (temp > ximg) { 
+                trans = 0;
+                temp = 2;
+            }
+
+            for (var j = 1; j <= ximg; j++){
+                id('content-' + j).style.transform = 'translateY(-'+trans+'%)'; 
+                id('content-' + j).style.transition = 'transform 2s';
+            }
         }
-        var sel = function(val){ 
-            return document.querySelectorAll(val); 
-        }
+        
+        setInterval(geser, 10000);
+
         
     </script>
     <script src="../public/script/client.js"></script>
