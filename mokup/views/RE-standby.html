@@ -106,7 +106,6 @@
 								$('#jssor_1 div:not(.caption)').css("height", size);
 								$('#jssor_1 img').css("height", size);
 								jssor_1_options.$SlideHeight = sHeight;
-								console.log(jssor_1_options);
 							}
 
 							//-- initialize --
@@ -116,8 +115,6 @@
 
 							//-- update size when resize --
 							$(window).on('resize', function(){ update(); });
-
-							console.log(jssor_1_options);
 
 							var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 					});
