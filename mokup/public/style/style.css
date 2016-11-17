@@ -26,7 +26,13 @@ html, body {
 }
 
 .standby {
+	background: linear-gradient(to left, #0067b0, #2cb7e3);
     background: -webkit-linear-gradient(right, #0067b0, #2cb7e3);
+}
+
+.standby #footer{
+	position: absolute;
+	width: 100%;
 }
 
 #bg {
@@ -67,7 +73,8 @@ html, body {
     height: 100%;
     right: 0;
     top: 0;
-    z-index: -1;
+	z-index:0;
+	//z-index: -1;
     width: 24%;
 }
 
@@ -140,6 +147,7 @@ html, body {
     width: 100%;
     align-items: center;
     justify-content: flex-end;
+	z-index: 99;
 }
 
 #logo-stnd {
@@ -155,6 +163,7 @@ html, body {
     align-items: flex-end;
     justify-content: flex-end;
     right: 0;
+	z-index: 99;
 }
 
 #cont-ktm #ktm {
@@ -320,12 +329,12 @@ html, body {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 
 .bg-antrian #main .queue .nama-loket {
     color: #fff;
-    font-size: 27px;
+    font-size: 25px;
 	text-align: center;
 }
 
@@ -338,8 +347,9 @@ html, body {
     color: #fff;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 27px;
+    font-size: 25px;
     text-align: center;
+	word-wrap: break-word;
 }
 
 #bg-main {
@@ -511,7 +521,7 @@ html, body {
     box-shadow: 0 0 40px black;
 }
 
-.menu-akademik, .menu-administrasi {
+.menus, .menu-akademik, .menu-administrasi {
     height: 50%;
     width: 30%;
     font-size: 200%;
