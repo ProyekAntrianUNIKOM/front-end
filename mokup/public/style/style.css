@@ -180,6 +180,7 @@ html, body {
     color: rgba(255, 255, 255, .7);
     text-wrap: wrap;
     text-align: center;
+	width: 100%;
 }
 
 #cont-ktm #ktm img {
@@ -530,6 +531,7 @@ html, body {
     margin: 1%;
     border-radius: 4%;
     box-shadow: 0 0 40px black;
+	box-sizing: border-box;
 }
 
 #bg-main #bg-row a {
@@ -677,7 +679,6 @@ html, body {
     height: 500px;
     width: 800px;
 	position: relative;
-    margin: auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 
     -webkit-animation-name: muncul;
