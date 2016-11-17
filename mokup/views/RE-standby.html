@@ -8,7 +8,7 @@
 </head>
 <body onload="times()">
 	<div id="background"></div>
-	<div id="bg">
+	<div id="bg" class="standby">
 
 		<!-- Header -->
 		<div id="bg-header" class="flex">
@@ -48,7 +48,7 @@
 		</div>
 
         <div id="frame">
-            <img src="../public/img/frameset.png" alt="">
+            <img src="../public/img/frameset2.png" alt="">
         </div>
 	</div>
 
@@ -59,7 +59,7 @@
     <div id="cont-ktm" class="flex">
         <div id="ktm" class="flex">
             <p>TAP YOUR KTM HERE</p>
-            <a href="menu-utama.html">
+            <a href="menu.html">
                 <img src="../public/img/ic_back.png" alt="back">
             </a>
         </div>
@@ -73,7 +73,7 @@
 						var heightInPercent = 0.73;
 						var fullScreen = Math.ceil(window.screen.height * heightInPercent);
 						var size = ($(window).height() * heightInPercent) + 'px';
-						sHeight = Math.ceil($(window).height() * heightInPercent);
+						var sHeight = Math.ceil($(window).height() * heightInPercent);
 
 							var jssor_1_SlideshowTransitions = [
 								{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}},
@@ -105,6 +105,7 @@
 								$('#jssor_1').css("height", size);
 								$('#jssor_1 div:not(.caption)').css("height", size);
 								$('#jssor_1 img').css("height", size);
+								$('.caption').css("margin-bottom", "0");
 								jssor_1_options.$SlideHeight = sHeight;
 							}
 
@@ -112,6 +113,15 @@
 							$('#jssor_1').css("height", size);
 							$('#jssor_1 div:not(.caption)').css("height", size);
 							$('#jssor_1 img').css("height", size);
+							var cHeight = $(window).height()
+							var temp = (cHeight - 641) + '%';
+							console.log(temp);
+							if (sHeight == fullScreen) {
+								$('.caption').css("margin-bottom", "0");
+							} else {
+								$('.caption').css("margin-bottom", '-20%');
+							}
+
 
 							//-- update size when resize --
 							$(window).on('resize', function(){ update(); });

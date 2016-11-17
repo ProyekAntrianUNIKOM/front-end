@@ -24,7 +24,7 @@
                 </div>
 
                 <div id="modal-footer" class="flex">
-                    <a href="menu-utama.html" id="exit" class="flex">
+                    <a href="" id="exit" class="flex">
                         KEMBALI
                     </a>
                     <a href="#" id="ambil" class="flex">
@@ -57,20 +57,32 @@
 		<!-- Menu -->
 		<div id="bg-main" class="flex">
 			<div id="label" class="flex">
-				<div id="text">LAYANAN ADMINISTRASI</div>
+				<div id="text">LAYANAN AKADEMIK & ADMINISTRASI</div>
 			</div>
 
 			<div id="bg-row" class="flex">
 				<a href="" class="menu-akademik flex">
-					<span>REGISTRASI ULANG</span>
+					<span>PINDAH JURUSAN</span>
 				</a>
 				<a href="" class="menu-akademik flex">
+					<span>CUTI AKADEMIK</span>
+				</a>
+				<a href="" class="menu-akademik flex">
+					<span>PENGUNDURAN DIRI</span>
+				</a>
+				<a href="" class="menu-akademik flex">
+					<span>AKTIF KEMBALI KULIAH</span>
+				</a>
+				<a href="" class="menu-akademik flex">
+					<span>REGISTRASI ULANG</span>
+				</a>
+                <a href="" class="menu-akademik flex">
 					<span>AUTODEBET</span>
 				</a>
 			</div>
 
 			<div id="back">
-				<a href="menu-utama.html">
+				<a href="RE-standby.html">
 					<img src="../public/img/ic_back.png" width="100" alt="back">
 				</a>
 			</div>
@@ -90,6 +102,7 @@
     <script>
         var $ = function(val){ return document.getElementById(val); };
         var $$ = function(val){ return document.querySelectorAll(val); };
+
 
         //-- modal --
         $('exit').onclick = function(){
