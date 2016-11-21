@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../public/script/angular.min.js"></script>
+	<link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body onload="times()">
+	<div id="background"></div>
+	<div id="bg">
+
+        <!-- Modal -->
+        <div id="modal-container" class="flex">
+            <div id="modal">
+
+                <div id="modal-header" class="flex">
+                    <p>LOKET 1 AKADEMIK</p>
+                </div>
+
+                <div id="modal-main" class="flex">
+                    <label>No. Antrian :</label>
+                    <div id="no-antrian">12</div>
+                </div>
+
+                <div id="modal-footer" class="flex">
+                    <a href="" id="exit" class="flex">
+                        KEMBALI
+                    </a>
+                    <a href="#" id="ambil" class="flex">
+                        AMBIL ANTRIAN
+                    </a>
+                </div>
+            </div>
+        </div>
+
+		<!-- Header -->
+		<div id="bg-header" class="flex">
+			<table>
+			  <tr>
+			      <td id="logo">
+			          <img src="../public/img/logo.png" height="115" alt="Logo">
+			      </td>
+			      <td id="label">
+			          <div id="label-1" align="center">UNIKOM</div>
+			          <div id="label-2" align="center">UNIVERSITAS KOMPUTER INDONESIA</div><br>
+			          <div id="label-3" align="center">Quality Is Our Tradition</div>
+			      </td>
+			  </tr>
+			</table>
+
+			<div id="header-img">
+			  <img src="../public/img/bg-header.png" alt="bg-header">
+			</div>
+		</div>
+
+		<!-- Menu -->
+		<div id="bg-main" class="flex">
+			<div id="label" class="flex">
+				<div id="text">LAYANAN AKADEMIK & ADMINISTRASI</div>
+			</div>
+
+			<div id="bg-row" class="flex">
+				<a href="" class="menus menu-akademik flex">
+					<span>PINDAH JURUSAN</span>
+				</a>
+				<a href="" class="menus menu-akademik flex">
+					<span>CUTI AKADEMIK</span>
+				</a>
+				<a href="" class="menus menu-akademik flex">
+					<span>PENGUNDURAN DIRI</span>
+				</a>
+				<a href="" class="menus menu-akademik flex">
+					<span>AKTIF KEMBALI KULIAH</span>
+				</a>
+				<a href="" class="menus menu-akademik flex">
+					<span>REGISTRASI ULANG</span>
+				</a>
+                <a href="" class="menus menu-akademik flex">
+					<span>AUTODEBET</span>
+				</a>
+			</div>
+
+			<div id="back">
+				<a href="standby.html">
+					<img src="../public/img/ic_back.png" width="100" alt="back">
+				</a>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer" class="flex">
+			<div></div>
+			<div id="footer-time"></div>
+			<marquee width="100%">
+				BIRO ADMINISTRASI AKADEMIK DAN KEMAHASISWAAN UNIKOM
+			</marquee>
+		</div>
+
+	</div>
+
+    <script>
+        var $ = function(val){ return document.getElementById(val); };
+        var $$ = function(val){ return document.querySelectorAll(val); };
+
+        //-- modal --
+        $('exit').onclick = function(){
+            $('modal').style.display = 'none';
+            $('modal-container').style.display = 'none';
+            $('modal-container').style.backgroundColor = 'rgba(0,0,0,0)';
+        };
+
+        var menuA = $$('.menu-akademik');
+        for (var i = 0; i <= menuA.length; i++) {
+            menuA[i].onclick = function(){
+                $('modal-container').style.display = 'flex';
+                $('modal').style.display = 'flex';
+                $('modal-container').style.backgroundColor = 'rgba(0,0,0,0.7)';
+            }
+        }
+    </script>
+	<script type="text/javascript" src="../controller/controller.js"></script>
+	<script type="text/javascript" src="../public/script/client.js"></script>
+</body>
+</html>
