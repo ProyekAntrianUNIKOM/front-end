@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="../public/style/style.css">
 </head>
 <body onload="tanggal()">
+    <!---- Modal ---->
+    <div class="modal-container">
+        <div class="box">
+            <div class="main flex">
+                <p>Anda yakin ingin logout?</p>
+            </div>
+            <div class="button flex">
+                <div class="ya flex">YA</div>
+                <div class="tidak flex">TIDAK</div>
+            </div>
+        </div>
+    </div>
+
     <div class="ambil-antrian">
         <div class="header flex">
             <div class="part-1 flex">
@@ -23,6 +36,7 @@
             <div class="part-2 flex">
                 <div class="nama-loket">Loket 1 Akademik</div>
                 <div class="nama-petugas">Nama Petugas</div>
+                <div class="logout">Logout</div>
             </div>
         </div>
 
@@ -69,5 +83,22 @@
     </div>
 
     <script src="../public/script/client.js"></script>
+    <script>
+        var $ = function(val){ return document.getElementById(val); };
+        var $$ = function(val){ return document.querySelectorAll(val); };
+
+        //-- modal --
+        $$('.tidak')[0].onclick = function(){
+            $$('.box')[0].style.display = 'none';
+            $$('.modal-container')[0].style.display = 'none';
+            $$('.modal-container')[0].style.backgroundColor = 'rgba(0,0,0,0)';
+        };
+
+            $$('.logout')[0].onclick = function(){
+                $$('.modal-container')[0].style.display = 'flex';
+                $$('.box')[0].style.display = 'flex';
+                $$('.modal-container')[0].style.backgroundColor = 'rgba(0,0,0,0.7)';
+            }
+    </script>
 </body>
 </html>
